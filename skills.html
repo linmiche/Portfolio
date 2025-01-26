@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/skills.css">
+</head>
+<body style="background-image: url('assets/background.png'); background-size: cover; background-position: center; background-repeat: no-repeat; margin: 0; height: 100vh;">
+    <div class="header">
+        <label for="toggle" class="toggleBtn">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <ul class="navbar">
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="about.html" >About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html" class="active">Skills & Tools</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>Skills</h1>
+        <h2>Tools</h2>
+        <div id="clouds-container">
+            <img src="assets/clouds.gif" alt="Moving Clouds" id="clouds">
+        </div>
+
+        <div id="stars-container">
+            <img src="assets/stars.gif" alt="Blinking Stars" id="stars">
+        </div>
+
+        <div class="background_card">
+            <img src="assets/skills/background_card1.png" alt="Purple Mock Website Window" id="background_card1">
+            <img src="assets/skills/background_card2.png" alt="Purple Mock Website Window" id="background_card2">
+        </div>
+
+        <div class="blurb">
+            <img src="assets/skills/blurb1.png" alt="Blue Blurb Background Card" id="blurb">
+        </div>
+
+        <div class="tools">
+            <img src="assets/skills/figma.png" alt="Figma Icon" id="tool1">
+            <img src="assets/skills/adobe.png" alt="Adobe Creative Suite Icon" id="tool2">
+            <img src="assets/skills/unity.png" alt="Unity Icon" id="tool3">
+            <img src="assets/skills/blender.png" alt="Blender Design Tool Icon" id="tool4">
+            <img src="assets/skills/canva.png" alt="Canva Icon" id="tool5">
+            <img src="assets/skills/vscode.png" alt="VSCODE Icon" id="tool6">
+            <img src="assets/skills/miro.png" alt="Miro Icon" id="tool7">
+            <img src="assets/skills/github.png" alt="GitHub Icon" id="tool8">
+        </div>
+
+        <div class="bubbles">
+            <img src="assets/skills/bubbles.gif" alt="Moving Bubbles" id="bubbles1">
+            <img src="assets/skills/bubbles.gif" alt="Moving Bubbles" id="bubbles2">
+            <img src="assets/skills/bubbles.gif" alt="Moving Bubbles" id="bubbles3">
+        </div>
+
+        <div class="blurbs">
+            <div class="blurb" id="blurb-figma">Figma</div>
+            <div class="blurb" id="blurb-adobe">Adobe Creative Suite</div>
+            <div class="blurb" id="blurb-unity">Unity</div>
+            <div class="blurb" id="blurb-blender">Blender</div>
+            <div class="blurb" id="blurb-canva">Canva</div>
+            <div class="blurb" id="blurb-vscode">VS Code</div>
+            <div class="blurb" id="blurb-miro">Miro</div>
+            <div class="blurb" id="blurb-github">GitHub</div>
+        </div>
+
+        <div class="skills-section">
+            <div class="skill">
+              <label for="python">Python</label>
+              <div class="progress-bar" id="python" data-level="70"> <div class="fill"></div> </div>
+            </div>
+            <div class="skill">
+                <label for="python">JavaScript</label>
+                <div class="progress-bar" id="javascript" data-level="80"> <div class="fill"></div> </div>
+              </div>
+              <div class="skill">
+                <label for="python">HTML</label>
+                <div class="progress-bar" id="html" data-level="90"> <div class="fill"></div> </div>
+              </div>
+              <div class="skill">
+                <label for="python">CSS</label>
+                <div class="progress-bar" id="css" data-level="90"> <div class="fill"></div> </div>
+              </div>
+              <div class="skill">
+                <label for="python">Prototyping</label>
+                <div class="progress-bar" id="prototyping" data-level="70"> <div class="fill"></div> </div>
+              </div>
+          </div>
+          
+
+        <audio id="hoverSound" src="assets/sounds/hover-sound.mp3" preload="auto"></audio> <!-- all sound effects from www.zapsplat.com-->
+        <audio id="clickSound" src="assets/sounds/click-sound.mp3" preload="auto"></audio>
+        <audio id="fillSound" src="assets/sounds/fill-sound.mp3" preload="auto"></audio>
+
+        <audio id="background-music" preload="auto"></audio>
+
+        <div class="audio-controls">
+            <label for="music-volume">Music Volume:</label>
+            <input type="range" id="music-volume" min="0" max="1" step="0.1" value="1">
+
+            <label for="sfx-volume">SFX Volume:</label>
+            <input type="range" id="sfx-volume" min="0" max="1" step="0.1" value="1">
+        </div>
+
+        <div class="page-navigation">
+            <a href="projects.html" class="nav-button previous-button">← Previous Page</a>
+            <a href="contact.html" class="nav-button next-button">Next Page (Contact) →</a>
+        </div>
+
+    </main>
+
+    <script src="js/skills.js"></script>
+</body>
+</html>

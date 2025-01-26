@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Press Start 2P';
+    z-index: -1;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+/* Homepage Container */
+.homepage_container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* Navigation Menu */
+/* General Navigation Menu */
+.homepage_menu {
+    position: relative; /* Keeps the menu container in its place */
+    z-index: 10; /* Ensures menu stays above other elements */
+}
+
+/* Navigation Icons (Resizable) */
+.homepage-menu-icon {
+    width: 65%; /* Default size for icons */
+}
+
+.homepage-menu-icon:hover {
+    transform: scale(1.2); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+#about-button {
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 19.5%;
+}
+
+
+#projects-button {
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 45.5%;
+}
+
+#skills-button {
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 58.5%;
+}
+
+#creative-button {
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 32.5%;
+}
+
+#contact-button {
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 71.5%;
+}
+
+#prizes-button  {
+    position: absolute;
+    width: 20.6%;
+    margin-top: 26.72%;
+    margin-left: 84.1%;
+    z-index: 1;
+}
+
+
+/* Additional Images Section */
+#hills-container {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+#hills {
+    width: 100%;
+    margin-top: 42%;
+    height: auto;
+}
+
+#michelle-container {
+    position: absolute;
+    z-index: 2;
+}
+
+#homepage-michelle {
+    width: 85%;
+    margin-top: 118%;
+    margin-left: 20%;
+    height: auto;
+}
+
+#title-container {
+    position: absolute;
+    z-index: 3;
+}
+
+#homepage-title {
+    width: 65%;
+    margin-left: 31%;
+    margin-top: 16%;
+    height: auto;
+}
+
+#start-button-container {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    margin-top: 29%;
+    margin-left: 42.5%;
+    z-index: 11;
+}
+
+#start-button {
+    display: absolute;
+    width: 60%;
+    height: auto;
+}
+
+#start-button-container:hover {
+    position: absolute;
+    filter: drop-shadow(0px 0px 10px white);
+    transform: scale(1.1); /* Enlarge slightly on hover */
+}
+
+
+#stars-container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+#stars {
+    width: 100%;
+    margin-top: -4;
+    height: auto;
+}
+
+#clouds-container {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+#clouds {
+    width: 100%;
+    margin-top: -2%;
+    height: auto;
+}
+
+#button-background-container {
+    position: absolute;
+    z-index: 5;
+}
+
+#homepage-button-background {
+    width: 75%;
+    margin-left: 17.5%;
+    margin-top: 41.5%;
+    opacity: 0.73;
+}
+
+.toggleBtn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(255, 181, 241);
+    position: absolute; /* Position independently */
+    top: .5rem;
+    right: 1rem;
+    z-index: 100;
+    background-color: rgb(58, 58, 159);
+    border-radius: 10px;
+}
+
+.toggleBtn:hover {
+    color: #ffffff;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .navbar {
+    display: grid;
+}
+
+.navbar {
+    display: none; /* Initially hidden */
+    list-style: none;
+    position: absolute; /* Positioned independently of the layout */
+    top: 4.5rem; /* Adjust as needed */
+    right: 1rem; /* Position near the toggle button */
+    background-color: rgb(255, 181, 241);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 50; /* Ensure it's above other elements */
+    grid-template-rows: repeat(4, auto); /* Align items */
+    gap: 8px;
+    margin-top: -.5%;
+}
+
+.navbar li {
+    margin: 0.5rem 0;
+    text-decoration: underline;
+    text-decoration-color: rgb(58, 58, 159);
+}
+
+.navbar a {
+    color: rgb(58, 58, 159);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.navbar a:hover {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-decoration-color: #ffffff;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    background-color: rgb(58, 58, 159);
+    color: white;
+    text-decoration: underline;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.navbar a.active:hover {
+    background-color: #ffffff;
+    color: rgb(58, 58, 159);
+    border-color: rgb(58, 58, 159);
+}
+
+
+.audio-controls {
+    position: fixed;
+    margin-top: .5%;
+    margin-left: .5%;
+    background-color: rgb(255, 181, 241); /* Slightly transparent */
+    padding: 3px 6px; /* Minimal padding */
+    border-radius: 4px; /* Minimal rounding */
+    box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Subtle shadow */
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start; /* Align items to the left */
+    gap: 12px; /* Minimal gap between groups */
+}
+
+.audio-group {
+    display: flex;
+    align-items: center; /* Align label and slider horizontally */
+    gap: 10px; /* Small gap between label and slider */
+}
+
+.audio-controls label {
+    color: rgb(58, 58, 159);
+    font-size: 0.65rem; /* Very small font size */
+    width: 60px; /* Restrict label width for a compact layout */
+    text-align: left; /* Align text to the right */
+}

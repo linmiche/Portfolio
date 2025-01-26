@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body style="background-image: url('assets/background.png'); background-size: cover; background-position: center; background-repeat: no-repeat; margin: 0; height: 100vh;">
+    <div class="header">
+        <label for="toggle" class="toggleBtn">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <ul class="navbar">
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="about.html" class="active">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills & Tools</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <main>
+        <div class="about-background">
+            <img src="assets/about/about_background.png" alt="Website Mock Window" id="about-background">
+        </div>
+
+        <div class="hidden-michelle">
+            <img src="assets/about/hidden_michelle.png" alt="Michelle Plushie" id="hidden-michelle">
+            <img src="assets/about/hidden_michelle_bottom.png" alt="Michelle Plushie" id="hidden-michelle-bottom">
+        </div>
+
+        <div class="about-blurbs">
+            <div id="blurb-1">
+                <img src="assets/about/1-export.png" alt="Blue Box" id="blurb1">
+            </div>
+            <div id="blurb-2">
+                <img src="assets/about/2-export.png" alt="White Box" id="blurb2">
+            </div>
+            <div id="blurb-3">
+                <img src="assets/about/3-export.png" alt="Green Box" id="blurb3">
+            </div>
+            <div id="blurb-4">
+                <img src="assets/about/4-export.png" alt="Orange Box" id="blurb4">
+            </div>
+        </div>
+
+        <div class="photo-switcher">
+            <!-- Left arrow -->
+            <button id="prev-photo" class="photo-arrow">&#8592;</button>
+            <!-- Image container -->
+            <img id="current-photo" src="assets/about/headshot_pixel.png" alt="Pixel Drawing of Me">
+            <!-- Right arrow -->
+            <button id="next-photo" class="photo-arrow">&#8594;</button>
+        </div>
+
+        <div id="clouds-container">
+            <img src="assets/clouds.gif" alt="Moving Clouds" id="clouds">
+        </div>
+
+        <div id="stars-container">
+            <img src="assets/stars.gif" alt="Blinking Stars" id="stars">
+        </div>
+
+        <div class="favorites">
+            <!-- Matcha -->
+            <div class="favorite-item">
+                <img src="assets/about/matcha.png" alt="Strawberry Matcha Latte" class="clickable-image" id="matcha">
+                <div class="blurb" id="blurb-matcha">Matcha Lattes</div>
+            </div>
+
+            <!-- Mango -->
+            <div class="favorite-item">
+                <img src="assets/about/mango.png" alt="Mango" class="clickable-image" id="mango">
+                <div class="blurb" id="blurb-camera">Photography</div>
+            </div>
+
+            <!-- Gameboy -->
+            <div class="favorite-item">
+                <img src="assets/about/gameboy.png" alt="Pink GameBoy Console" class="clickable-image" id="gameboy">
+                <div class="blurb" id="blurb-gameboy">Gaming</div>
+            </div>
+        </div>
+
+        <div class="stickers">
+            <div id="stickers1">
+                <img src="assets/about/michigan.png" alt="University of Michigan Logo" id="michigan">
+            </div>
+            <div id="stickers2">
+                <img src="assets/about/game_controller.png" alt="Pink Game Controller" id="game_controller">
+            </div>
+        </div>
+
+        <div class="contacts">
+            <!-- LinkedIn -->
+            <div id="contact1" class="contact-item">
+                <a href="https://www.linkedin.com/in/michelle-lin-760306188/" target="_blank" aria-label="LinkedIn">
+                    <img src="assets/about/linkedin.png" alt="LinkedIn Logo" id="linkedin">
+                </a>
+                <div class="blurb" id="blurb-linkedin">Visit my LinkedIn</div>
+            </div>
+            <!-- Resume -->
+            <div id="contact2" class="contact-item">
+                <a href="assets/about/resume.pdf" target="_blank" aria-label="Resume">
+                    <img src="assets/about/resume.png" alt="Resume Icon" id="resume">
+                </a>
+                <div class="blurb" id="blurb-resume">View my Resume</div>
+            </div>
+        </div>
+
+        <h1>About Me</h1>
+        <h2 class="vertical-move">Hi! I’m Michelle Lin, <br>
+            a UX designer with a 
+            <br>passion for crafting 
+            <br>engaging and immersive 
+            <br>experiences.</h2>
+
+        <h3>Favorites</h3>
+        <h3>Links</h3>
+        <div class="scroll-box">
+            <h4>Who I Am</h4>
+            <ul class="am">
+                <li>Graduate student at the University of Michigan School of Information, with a background in Neuroscience.</li>
+                <li>UX/UI designer with experience in crafting apps and interfaces that solve real-world problems.</li>
+                <li>Outside of design, I’m an avid gamer and crafter who enjoys crochet, ceramics, and photography. I also have a soft spot for arcade games, which inspired this portfolio’s theme.</li>
+            </ul>
+
+            <h4>What I Do</h4>
+            <ul class="do">
+                <li>Design engaging, user-centered experiences for digital and extended reality (XR) platforms.</li>
+                <li>Blend user research, prototyping, and creative storytelling to create impactful designs.</li>
+                <li>Focus on gamifying user interactions and building intuitive interfaces.</li>
+            </ul>
+
+            <h4>Skills</h4>
+            <ul class="skills">
+                <li>UX Research and Prototyping</li>
+                <li>Interaction and Visual Design</li>
+                <li>Figma, Adobe Creative Cloud, Unity, Python, and HTML/CSS/JavaScript</li>
+            </ul>
+
+            <h4>Goal</h4>
+                    <ul class="goal">
+                        <li>Whether it’s designing intuitive game interfaces or crafting immersive XR experiences, I want to make technology accessible and enjoyable for everyone.</li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+        </div>
+
+        <audio id="hoverSound" src="assets/sounds/hover-sound.mp3" preload="auto"></audio> <!-- all sound effects from www.zapsplat.com-->
+        <audio id="clickSound" src="assets/sounds/click-sound.mp3" preload="auto"></audio>
+
+        <audio id="background-music" preload="auto"></audio>
+
+        <div class="audio-controls">
+            <label for="music-volume">Music Volume:</label>
+            <input type="range" id="music-volume" min="0" max="1" step="0.1" value="1">
+
+            <label for="sfx-volume">SFX Volume:</label>
+            <input type="range" id="sfx-volume" min="0" max="1" step="0.1" value="1">
+        </div>
+
+
+        <div class="page-navigation">
+            <a href="home.html" class="nav-button previous-button">← Previous Page</a>
+            <a href="projects.html" class="nav-button next-button">Next Page (Projects) →</a>
+        </div>
+
+    </main>
+
+    <script src="js/about.js"></script>
+</body>
+</html>

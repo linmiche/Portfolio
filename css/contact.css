@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Press Start 2P';
+    z-index: -1;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Volume */
+.audio-controls {
+    position: fixed;
+    margin-top: .5%;
+    margin-left: .5%;
+    background-color: rgb(255, 181, 241); /* Slightly transparent */
+    padding: 3px 6px; /* Minimal padding */
+    border-radius: 4px; /* Minimal rounding */
+    box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Subtle shadow */
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start; /* Align items to the left */
+    gap: 12px; /* Minimal gap between groups */
+}
+
+.audio-group {
+    display: flex;
+    align-items: center; /* Align label and slider horizontally */
+    gap: 10px; /* Small gap between label and slider */
+}
+
+.audio-controls label {
+    color: rgb(58, 58, 159);
+    font-size: 0.65rem; /* Very small font size */
+    width: 60px; /* Restrict label width for a compact layout */
+    text-align: left; /* Align text to the right */
+}
+
+/* navbar*/
+
+.toggleBtn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(255, 181, 241);
+    position: absolute; /* Position independently */
+    top: .5rem;
+    right: 1rem;
+    z-index: 100;
+    background-color: rgb(58, 58, 159);
+    border-radius: 10px;
+}
+
+.toggleBtn:hover {
+    color: #ffffff;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .navbar {
+    display: grid;
+}
+
+.navbar {
+    display: none; /* Initially hidden */
+    list-style: none;
+    position: absolute; /* Positioned independently of the layout */
+    top: 4.5rem; /* Adjust as needed */
+    right: 1rem; /* Position near the toggle button */
+    background-color: rgb(255, 181, 241);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3000; /* Ensure it's above other elements */
+    grid-template-rows: repeat(4, auto); /* Align items */
+    gap: 8px;
+    margin-top: -.5%;
+}
+
+.navbar li {
+    margin: 0.5rem 0;
+    text-decoration: underline;
+    text-decoration-color: rgb(58, 58, 159);
+}
+
+.navbar a {
+    color: rgb(58, 58, 159);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.navbar a:hover {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-decoration-color: #ffffff;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    background-color: rgb(58, 58, 159);
+    color: white;
+    text-decoration: underline;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.navbar a.active:hover {
+    background-color: #ffffff;
+    color: rgb(58, 58, 159);
+    border-color: rgb(58, 58, 159);
+}
+
+/* Clouds & Stars*/
+#clouds-container {
+    position: absolute;
+    z-index: -3;
+}
+
+#clouds {
+    width: 100%;
+    margin-top: -1%;
+    height: auto;
+}
+
+#stars-container {
+    position: absolute;
+    z-index: -4;
+}
+
+#stars {
+    width: 100%;
+    margin-top: -4;
+    height: auto;
+}
+
+.background_card {
+    position: relative;
+}
+
+#background_card1 {
+    position: absolute;
+    width: 55%;
+    margin-left: 40%;
+    margin-top: 1%;
+}
+
+#background_card2 {
+    position: absolute;
+    width: 29%;
+    margin-left: 5.5%;
+    margin-top: 4%;
+}
+
+.joystick{
+    position: relative;
+}
+
+#joystick {
+    position: absolute;
+    width: 15%;
+    margin-left: 45%;
+    margin-top: 35%;
+}
+
+.contact-button {
+    position: relative;
+    background: none;
+    border: none; /* Remove default border */
+    padding: 0;
+}
+
+#contact-button {
+    position: absolute;
+    width: 68%;
+    margin-left: -11%;
+    margin-top: 19%;
+}
+
+.contact-button img {
+    width: 150px; /* Adjust size of the image */
+    transition: transform 0.2s ease; /* Add hover effect if desired */
+}
+
+.contact-button img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: drop-shadow(0px 0px 8px rgb(255, 255, 255));
+}
+
+.stickers {
+    position: relative;
+}
+
+#bunny {
+    position: absolute;
+    margin-top: 26%;
+    margin-left: 11%;
+    width: 18%;
+}
+
+#heart {
+    position: absolute;
+    width: 17%;
+    margin-left: 12%;
+    margin-top: 10%;
+}
+
+h1 {
+    position: absolute;
+    font-size: 310%;
+    margin-left: 50%;
+    margin-top: 4.5%;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 10px rgb(57, 34, 91));
+}
+
+h2 {
+    position: absolute;
+    font-size: 182%;
+    margin-left: 65.5%;
+    margin-top: 43.5%;
+    color: #1e0735;
+    z-index: 2000;
+}
+
+h3 {
+    position: absolute;
+    font-size: 182%;
+    margin-left: 11%;
+    border-radius: 1rem;
+    margin-top: 6.5%;
+    color: #6f0052;
+}
+
+.contact-form {
+    width: 40%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    font-family: 'Press Start 2P', sans-serif;
+    z-index: 1000;
+    margin-left: 47%;
+    margin-top: 14%;
+  }
+
+  .contact-form label {
+    font-size: 120%;
+    color: #191919;
+    z-index: 1000;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .contact-form textarea {
+    resize: none; /* Prevent resizing */
+    z-index: 1000;
+  }
+
+  .page-navigation {
+    position: absolute;
+    padding: 20%;
+    margin-top: 31.5%;
+}
+
+.nav-button {
+    position: absolute;
+    text-decoration: none; /* Remove underline */
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: #ff00ae; /* Button background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background: linear-gradient(90deg, #ff6699, #3366ff); /* Change color on hover */
+}
+
+.previous-button {
+    margin-left: -45%;
+    z-index: 1000;
+}
+
+.next-button {
+    margin-left: 141%;
+    white-space: nowrap;
+    z-index: 1000;
+}

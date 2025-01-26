@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body style="background-image: url('assets/background.png'); background-size: cover; background-position: center; background-repeat: no-repeat; margin: 0; height: 100vh;">
+    <div class="header">
+        <label for="toggle" class="toggleBtn">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <ul class="navbar">
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="about.html" >About Me</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="skills.html">Skills & Tools</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <main>
+
+        <div class="background_grid">
+            <img src="assets/projects/background_grid.png" alt="White Grid Patter" id="background_grid">
+        </div>
+
+        <div id="stars-container">
+            <img src="assets/stars.gif" alt="Blinking Stars" id="stars">
+        </div>
+
+        <div class="background_card">
+            <img src="assets/projects/background_card.png" alt="Purple Mock Website Window" id="background_card">
+            <img src="assets/projects/background_card2.png" alt="Purple GameBoy" id="background_card2">
+            <img src="assets/projects/background_card3.png" alt="Purple GameBoy Back" id="background_card3">
+        </div>
+
+        <div class="project-card" data-preview="assets/projects/stardew.png" data-video="assets/projects/stardew.mp4" data-class="stardew">
+            <img src="assets/projects/project-card2.png" alt="Stardew Valley VR Card" id="project-card1">
+            <div class="blurb" id="blurb-stardew">Stardew Valley VR</div>
+        </div>
+        <div class="project-card" data-preview="assets/projects/boba.png" data-video="assets/projects/boba.mov" data-class="boba">
+            <img src="assets/projects/project-card1.png" alt="Good Boba, Great Boba! Card" id="project-card2">
+            <div class="blurb" id="blurb-boba">Good Boba, Great Boba!</div>
+        </div>
+        <div class="project-card" data-preview="assets/projects/alice.png">
+            <img src="assets/projects/project-card3.png" alt="Racing to Connect Card" id="project-card3" data-class="alice">
+            <div class="blurb" id="blurb-alice">Racing to Connect</div>
+        </div>
+        <div class="project-card" data-preview="assets/projects/covid.png">
+            <img src="assets/projects/project-card4.png" alt="CovidConnect Card" id="project-card4" data-class="covid">
+            <div class="blurb" id="blurb-covid">CovidConnect</div>
+        </div>
+        <div class="project-card" data-preview="assets/projects/adhd.png">
+            <img src="assets/projects/project-card5.png" alt="TaskTamer Card" id="project-card5" data-class="adhd">
+            <div class="blurb" id="blurb-adhd">TaskTamer</div>
+        </div>
+        <div class="project-card" data-preview="assets/projects/optimism.png">
+            <img src="assets/projects/project-card6.png" alt="Loneliness Study Card" id="project-card6" data-class="optimism">
+            <div class="blurb" id="blurb-optimism">Loneliness</div>
+        </div>
+
+        <div class="hover-preview">
+            <img src="" alt="Preview Image">
+        </div>
+
+        <div class="title-blurb">
+            <img src="assets/projects/title-blurb.png" alt="Pink Title Background Card" id="title-blurb">
+        </div>
+
+        <div class="filler">
+            <img src="assets/projects/filler.png" alt="Filler" id="filler">
+        </div>
+
+        <h1>Projects</h1>
+        <h2 class="moving-h2">PREVIEW (scroll)</h2>
+
+        <div class="scroll-indicator">
+            <span>Click to Choose Your Level!</span>
+        </div>
+
+        <div class="stickers">
+            <div id="stickers1">
+                <img src="assets/projects/pixel.gif" alt="Blue Star Gif" id="pixel">
+            </div>
+            <div id="stickers2">
+                <img src="assets/projects/pixelstar-pixel.gif" alt="Pink Cloud Gif" id="pixel2">
+            </div>
+            <div id="stickers3">
+                <img src="assets/projects/pink_gamecard.png" alt="Pink Game Card" id="pixel3">
+            </div>
+            <div id="stickers4">
+                <img src="assets/projects/blue_gamecard.png" alt="Blue Game Card" id="pixel4">
+            </div>
+        </div>
+
+        <div id="project-modal" class="modal">
+            <span class="close-button">&times;</span>
+            <div class="modal-content">
+                <img id="modal-image" src="" alt="Project Preview" style="display: none;">
+                <video id="modal-video" controls style="display: none;"></video>
+                <a id="modal-link" href="#" target="_blank" style="display: none;">Learn More</a>
+            </div>
+        </div>
+
+        <audio id="hoverSound" src="assets/sounds/hover-sound.mp3" preload="auto"></audio> <!-- all sound effects from www.zapsplat.com-->
+        <audio id="clickSound" src="assets/sounds/click-sound.mp3" preload="auto"></audio>
+
+        <audio id="background-music" preload="auto"></audio>
+
+        <div class="audio-controls">
+            <label for="music-volume">Music Volume:</label>
+            <input type="range" id="music-volume" min="0" max="1" step="0.1" value="1">
+
+            <label for="sfx-volume">SFX Volume:</label>
+            <input type="range" id="sfx-volume" min="0" max="1" step="0.1" value="1">
+        </div>
+
+        <div class="page-navigation">
+            <a href="about.html" class="nav-button previous-button">← Previous Page</a>
+            <a href="skills.html" class="nav-button next-button">Next Page (Skills) →</a>
+        </div>
+
+    </main>
+
+    <script src="js/projects.js"></script>
+</body>
+</html>

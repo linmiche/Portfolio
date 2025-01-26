@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/creative_work.css">
+</head>
+<body style="background-image: url('assets/background.png'); background-size: cover; background-position: center; background-repeat: no-repeat; margin: 0; height: 100vh;">
+    <div class="header">
+        <label for="toggle" class="toggleBtn">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <ul class="navbar">
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="about.html" >About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills & Tools</a></li>
+            <li><a href="creative_work.html" class="active">Creative Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="prizes.html">Prize Room</a></li>
+        </ul>
+    </div>
+    <main>
+        <div id="clouds-container">
+            <img src="assets/clouds.gif" alt="Moving Clouds" id="clouds">
+        </div>
+
+        <div id="stars-container">
+            <img src="assets/stars.gif" alt="Blinking Stars" id="stars">
+        </div>
+
+        <div class="construction">
+            <img src="assets/prizes/construction.gif" alt="Under Construction Gif" id="construction">
+        </div>
+
+        <audio id="hoverSound" src="assets/sounds/hover-sound.mp3" preload="auto"></audio> <!-- all sound effects from www.zapsplat.com-->
+        <audio id="clickSound" src="assets/sounds/click-sound.mp3" preload="auto"></audio>
+
+        <audio id="background-music" preload="auto"></audio>
+
+        <div class="audio-controls">
+            <label for="music-volume">Music Volume:</label>
+            <input type="range" id="music-volume" min="0" max="1" step="0.1" value="1">
+
+            <label for="sfx-volume">SFX Volume:</label>
+            <input type="range" id="sfx-volume" min="0" max="1" step="0.1" value="1">
+        </div>
+
+    </main>
+
+    <script src="js/creative_work.js"></script>
+</body>
+</html>

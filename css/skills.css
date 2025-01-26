@@ -1,0 +1,450 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Press Start 2P';
+    z-index: -1;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Volume */
+.audio-controls {
+    position: fixed;
+    margin-top: .5%;
+    margin-left: .5%;
+    background-color: rgb(255, 181, 241); /* Slightly transparent */
+    padding: 3px 6px; /* Minimal padding */
+    border-radius: 4px; /* Minimal rounding */
+    box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Subtle shadow */
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start; /* Align items to the left */
+    gap: 12px; /* Minimal gap between groups */
+}
+
+.audio-group {
+    display: flex;
+    align-items: center; /* Align label and slider horizontally */
+    gap: 10px; /* Small gap between label and slider */
+}
+
+.audio-controls label {
+    color: rgb(58, 58, 159);
+    font-size: 0.65rem; /* Very small font size */
+    width: 60px; /* Restrict label width for a compact layout */
+    text-align: left; /* Align text to the right */
+}
+
+/* navbar*/
+
+.toggleBtn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(255, 181, 241);
+    position: absolute; /* Position independently */
+    top: .5rem;
+    right: 1rem;
+    z-index: 100;
+    background-color: rgb(58, 58, 159);
+    border-radius: 10px;
+}
+
+.toggleBtn:hover {
+    color: #ffffff;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .navbar {
+    display: grid;
+}
+
+.navbar {
+    display: none; /* Initially hidden */
+    list-style: none;
+    position: absolute; /* Positioned independently of the layout */
+    top: 4.5rem; /* Adjust as needed */
+    right: 1rem; /* Position near the toggle button */
+    background-color: rgb(255, 181, 241);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 50; /* Ensure it's above other elements */
+    grid-template-rows: repeat(4, auto); /* Align items */
+    gap: 8px;
+    margin-top: -.5%;
+}
+
+.navbar li {
+    margin: 0.5rem 0;
+    text-decoration: underline;
+    text-decoration-color: rgb(58, 58, 159);
+}
+
+.navbar a {
+    color: rgb(58, 58, 159);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.navbar a:hover {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-decoration-color: #ffffff;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    background-color: rgb(58, 58, 159);
+    color: white;
+    text-decoration: underline;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.navbar a.active:hover {
+    background-color: #ffffff;
+    color: rgb(58, 58, 159);
+    border-color: rgb(58, 58, 159);
+}
+
+/* Clouds & Stars*/
+#clouds-container {
+    position: absolute;
+    z-index: -3;
+}
+
+#clouds {
+    width: 100%;
+    margin-top: -1%;
+    height: auto;
+}
+
+#stars-container {
+    position: absolute;
+    z-index: -4;
+}
+
+#stars {
+    width: 100%;
+    margin-top: -4;
+    height: auto;
+}
+
+.background_card {
+    position: relative;
+}
+
+#background_card1 {
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 4%;
+    width: 47%;
+    top: 10%;
+}
+
+
+#background_card2 {
+    position: absolute;
+    margin-top: 3.4%;
+    margin-left: 55%;
+    width: 40%;
+}
+
+.blurb {
+    display: none;
+    position: relative;
+}
+
+.tools {
+    position: relative;
+    filter: drop-shadow(0px 0px 10px rgb(57, 34, 91));
+}
+
+
+#tool1 {
+    position: absolute;
+    width: 8%;
+    margin-left: 60%;
+    margin-top: 15%;
+}
+
+#tool2 {
+    position: absolute;
+    width: 8%;
+    margin-left: 71%;
+    margin-top: 15%;
+}
+
+#tool3 {
+    position: absolute;
+    width: 8%;
+    margin-left: 82%;
+    margin-top: 15%;
+}
+
+#tool4 {
+    position: absolute;
+    width: 8%;
+    margin-left: 60%;
+    margin-top: 27%;
+}
+
+#tool5 {
+    position: absolute;
+    width: 8%;
+    margin-left: 71%;
+    margin-top: 27%;
+}
+
+#tool6 {
+    position: absolute;
+    width: 8%;
+    margin-left: 82%;
+    margin-top: 27%;
+}
+
+#tool7 {
+    position: absolute;
+    width: 8%;
+    margin-left: 65.5%;
+    margin-top: 39%;
+}
+
+#tool8 {
+    position: absolute;
+    width: 8%;
+    margin-left: 76.5%;
+    margin-top: 39%;
+}
+
+#tool1:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+#tool2:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+#tool3:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+#tool4:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+#tool5:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+#tool6:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+#tool7:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+#tool8:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgb(255, 255, 255));
+}
+
+.bubbles {
+    position: relative;
+}
+
+#bubbles1 {
+    position: absolute;
+    margin-top: 43%;
+    width: 10%;
+}
+
+#bubbles2 {
+    position: absolute;
+    width: 13%;
+    margin-left: 51%;
+    margin-top: -1%;
+}
+
+#bubbles3 {
+    position: absolute;
+    width: 13%;
+    margin-left: 87%;
+    margin-top: 40%;
+}
+
+h1 {
+    position: absolute;
+    z-index: 10;
+    font-size: 350%;
+    margin-top: 6%;
+    margin-left: 16.5%;
+    color: rgb(52, 14, 95);
+}
+
+h2 {
+    position: absolute;
+    z-index: 10;
+    font-size: 350%;
+    margin-top: 6.5%;
+    margin-left: 66%;
+    color: rgb(52, 14, 95);
+}
+
+.blurb {
+    position: absolute;
+    transform: translateX(-50%);
+    display: none; /* Initially hidden */
+    background-color: rgb(253, 187, 255);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.8rem;
+}
+
+#blurb-figma {
+    margin-top: 24%;
+    margin-left: 64%;
+    z-index: 10;
+}
+
+#blurb-adobe{
+    margin-top: 24%;
+    margin-left: 75%;
+}
+
+#blurb-unity {
+    margin-top: 24%;
+    margin-left: 86%;
+}
+
+#blurb-blender {
+    margin-top: 36%;
+    margin-left: 64%;
+    z-index: 10;
+}
+
+#blurb-canva {
+    margin-top: 36%;
+    margin-left: 75%;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+#blurb-vscode {
+    margin-top: 36%;
+    margin-left: 86%;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+#blurb-miro {
+    margin-top: 48%;
+    margin-left: 69.5%;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+#blurb-github {
+    margin-top: 48%;
+    margin-left: 80.5%;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.skills-section {
+    position: absolute;
+    width: 38%;
+    margin-top: 15%;
+    margin-left: 8.5%;
+    filter: drop-shadow(0px 0px 10px rgb(251, 190, 215));
+  }
+
+  .skill {
+    margin-bottom: 8%;
+  }
+
+  label {
+    font-size: 120%;
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+  }
+
+  .progress-bar {
+    width: 100%; /* Consistent width for all bars */
+    height: 30px;
+    background: #ddd; /* Empty bar color */
+    border-radius: 10px;
+    position: relative; /* Enables positioning for the .fill */
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    width: 0%; /* Starts empty */
+    background: linear-gradient(90deg, #ff99cc, #66ccff); /* Color for the fill */
+    border-radius: 10px;
+    position: absolute; /* Positioned relative to .progress-bar */
+    top: 0;
+    left: 0;
+    transition: width 1s ease-in-out; /* Smooth animation */
+}
+
+.page-navigation {
+    position: absolute;
+    padding: 20%;
+    margin-top: 31.5%;
+}
+
+.nav-button {
+    position: absolute;
+    text-decoration: none; /* Remove underline */
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
+    color: white;
+    background-color: #ff00ae; /* Button background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background: linear-gradient(90deg, #ff6699, #3366ff); /* Change color on hover */
+}
+
+.previous-button {
+    margin-left: -45%;
+    z-index: 1000;
+}
+
+.next-button {
+    margin-left: 141%;
+    white-space: nowrap;
+    z-index: 1000;
+}
