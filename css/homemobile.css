@@ -1,0 +1,284 @@
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: 'Press Start 2P';
+        z-index: -1;
+    }
+
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+    /* Homepage Container */
+    .homepage_container {
+        position: relative;
+
+        z-index: 1;
+    }
+
+    .homepage_menu {
+        position: relative; /* Keeps the menu container in its place */
+        z-index: 10; /* Ensures menu stays above other elements */
+    }
+
+    /* Navigation Icons (Resizable) */
+    .homepage-menu-icon {
+        width: 100px; /* Default size for icons */
+        position: relative;
+    }
+
+    .homepage-menu-icon:hover {
+        transform: scale(1.2); /* Enlarge slightly on hover */
+        filter: drop-shadow(0px 0px 10px white);
+    }
+
+    #about-button {
+        position: absolute;
+        margin-top: 83%;
+        margin-left: 6%;
+        z-index: 1000;
+    }
+
+    #projects-button {
+        position: absolute;
+        margin-top: 83%;
+        margin-left: 37.5%;
+    }
+
+    #skills-button {
+        position: absolute;
+        margin-top: 83%;
+        margin-left: 68%;
+    }
+
+    #creative-button {
+        position: absolute;
+        margin-top: 112%;
+        margin-left: 21.5%;
+    }
+
+    #contact-button {
+        position: absolute;
+        margin-top: 112%;
+        margin-left: 52%;
+    }
+
+    #prizes-button  {
+        position: absolute;
+        margin-top: 128.2%;
+        margin-left: 76%;
+        z-index: 2000;
+    }
+
+    /* Additional Images Section */
+    #hills-container {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #hills {
+        width: 100%;
+        margin-top: 158%;
+        height: auto;
+    }
+
+    #michelle-container {
+        position: absolute;
+        z-index: 3;
+    }
+
+    #homepage-michelle {
+        width: 30%;
+        margin-top: 198%;
+        margin-left: 1%;
+        z-index: 3;
+        height: auto;
+    }
+
+    #title-container {
+        position: absolute;
+        z-index: 3;
+    }
+
+    #homepage-title {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 29%;
+    }
+    
+    #start-button-container {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        padding: 0;
+        margin-top: 60%;
+        margin-left: 30%;
+        z-index: 11;
+    }
+    
+    #start-button {
+        display: absolute;
+        width: 60%;
+    }
+    
+    #start-button-container:hover {
+        position: absolute;
+        filter: drop-shadow(0px 0px 10px white);
+        transform: scale(1.1); /* Enlarge slightly on hover */
+    }
+    
+    
+    #stars-container {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+    }
+    
+    #stars {
+        width: 100%;
+        margin-top: -4;
+        height: auto;
+    }
+    
+    #clouds-container {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+    
+    #clouds {
+        width: 100%;
+        margin-top: -2%;
+        height: auto;
+    }
+    
+    #button-background-container {
+        position: absolute;
+        z-index: 2;
+    }
+    
+    #homepage-button-background {
+        width: 290%;
+        margin-left: -10%;
+        margin-top: 82%;
+        opacity: 0.73;
+        z-index: 2;
+    }
+    
+    .toggleBtn {
+        font-size: 2.1rem;
+        cursor: pointer;
+        color: rgb(255, 181, 241);
+        position: absolute; /* Position independently */
+        right: 1rem;
+        z-index: 100;
+        background-color: rgb(58, 58, 159);
+        border-radius: 10px;
+    }
+    
+    .toggleBtn:hover {
+        color: #ffffff;
+    }
+    
+    #toggle {
+        display: none;
+    }
+    
+    #toggle:checked ~ .navbar {
+        display: grid;
+    }
+    
+    .navbar {
+        display: none; /* Initially hidden */
+        list-style: none;
+        position: absolute; /* Positioned independently of the layout */
+        top: 4.5rem; /* Adjust as needed */
+        right: 1rem; /* Position near the toggle button */
+        background-color: rgb(255, 181, 241);
+        padding: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 50; /* Ensure it's above other elements */
+        grid-template-rows: repeat(4, auto); /* Align items */
+        gap: 8px;
+        margin-top: -.5%;
+    }
+    
+    .navbar li {
+        margin: 0.5rem 0;
+        text-decoration: underline;
+        text-decoration-color: rgb(58, 58, 159);
+    }
+    
+    .navbar a {
+        color: rgb(58, 58, 159);
+        text-decoration: none;
+        text-decoration-color: white;
+    }
+    
+    .navbar a:hover {
+        background-color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        text-decoration-color: #ffffff;
+    }
+    
+    .navbar a.active {
+        font-weight: bold;
+        background-color: rgb(58, 58, 159);
+        color: white;
+        text-decoration: underline;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+    
+    .navbar a.active:hover {
+        background-color: #ffffff;
+        color: rgb(58, 58, 159);
+        border-color: rgb(58, 58, 159);
+    }
+    
+    
+    .audio-controls {
+        position: fixed;
+        margin-top: 3%;
+        margin-left: 2%;
+        background-color: rgb(255, 181, 241); /* Slightly transparent */
+        padding: 3px 6px; /* Minimal padding */
+        border-radius: 4px; /* Minimal rounding */
+        box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Subtle shadow */
+        z-index: 1000;
+        display: flex;
+        align-items: flex-start; /* Align items to the left */
+        gap: 12px; /* Minimal gap between groups */
+    }
+    
+    .audio-group {
+        display: flex;
+        align-items: center; /* Align label and slider horizontally */
+        gap: 10px; /* Small gap between label and slider */
+    }
+    
+    .audio-controls label {
+        color: rgb(58, 58, 159);
+        font-size: 0.58rem; /* Very small font size */
+        width: 60px; /* Restrict label width for a compact layout */
+        text-align: left; /* Align text to the right */
+    }
+
+    .audio-controls input[type="range"] {
+        width: 65px; /* Decrease width */
+    }
+    
+}

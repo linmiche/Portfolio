@@ -1,0 +1,633 @@
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-image: url('assets/background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        font-family: 'Press Start 2P';
+        z-index: -1;
+    }
+
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .page-navigation {
+        position: absolute;
+        padding: 20%;
+        margin-top: 140%;
+    }
+
+    .nav-button {
+        position: absolute;
+        text-decoration: none; /* Remove underline */
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 7px;
+        color: white;
+        background-color: #ff00ae; /* Button background */
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: transform 0.2s, background 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-button:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        background: linear-gradient(90deg, #ff6699, #3366ff); /* Change color on hover */
+    }
+
+    .previous-button {
+        position: fixed;
+        margin-left: -18%;
+        z-index: 1000;
+    }
+
+    .next-button {
+        position: fixed;
+        margin-left: 32%;
+        white-space: nowrap;
+        z-index: 1000;
+    }
+
+.toggleBtn {
+    font-size: 2.1rem;
+    cursor: pointer;
+    color: rgb(255, 181, 241);
+    position: absolute; /* Position independently */
+    right: 1rem;
+    z-index: 100;
+    background-color: rgb(58, 58, 159);
+    border-radius: 10px;
+}
+
+.toggleBtn:hover {
+    color: #ffffff;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .navbar {
+    display: grid;
+}
+
+.navbar {
+    display: none; /* Initially hidden */
+    list-style: none;
+    position: absolute; /* Positioned independently of the layout */
+    top: 4.5rem; /* Adjust as needed */
+    right: 1rem; /* Position near the toggle button */
+    background-color: rgb(255, 181, 241);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 5000; /* Ensure it's above other elements */
+    grid-template-rows: repeat(4, auto); /* Align items */
+    gap: 8px;
+    margin-top: -.5%;
+}
+
+.navbar li {
+    margin: 0.5rem 0;
+    text-decoration: underline;
+    text-decoration-color: rgb(58, 58, 159);
+}
+
+.navbar a {
+    color: rgb(58, 58, 159);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.navbar a:hover {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-decoration-color: #ffffff;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    background-color: rgb(58, 58, 159);
+    color: white;
+    text-decoration: underline;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.navbar a.active:hover {
+    background-color: #ffffff;
+    color: rgb(58, 58, 159);
+    border-color: rgb(58, 58, 159);
+}
+
+
+.audio-controls {
+    position: fixed;
+    margin-top: 3%;
+    margin-left: 2%;
+    background-color: rgb(255, 181, 241); /* Slightly transparent */
+    padding: 3px 6px; /* Minimal padding */
+    border-radius: 4px; /* Minimal rounding */
+    box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Subtle shadow */
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start; /* Align items to the left */
+    gap: 12px; /* Minimal gap between groups */
+}
+
+.audio-group {
+    display: flex;
+    align-items: center; /* Align label and slider horizontally */
+    gap: 10px; /* Small gap between label and slider */
+}
+
+.audio-controls label {
+    color: rgb(58, 58, 159);
+    font-size: 0.58rem; /* Very small font size */
+    width: 60px; /* Restrict label width for a compact layout */
+    text-align: left; /* Align text to the right */
+}
+
+.audio-controls input[type="range"] {
+    width: 65px; /* Decrease width */
+}
+
+
+.background_grid {
+    position: relative;
+}
+
+#background_grid {
+    position: absolute;
+    width: 300%;
+    z-index: -2;
+}
+.background_card {
+    position: relative;
+}
+
+#background_card {
+    position: absolute;
+    width: 96%;
+    margin-top: 75%;
+    margin-left: 2%;
+    filter: drop-shadow(0px 0px 10px rgb(57, 34, 91));
+}
+
+#background_card2 {
+    position: absolute;
+    width: 46%;
+    margin-top: 20%;
+    margin-left: 52%;
+    filter: drop-shadow(0px 0px 10px rgb(57, 34, 91));
+    z-index: 3;
+}
+
+#background_card3 {
+    position: absolute;
+    width: 46%;
+    margin-top: 18%;
+    margin-left: 52%;
+    filter: drop-shadow(0px 0px 10px rgb(57, 34, 91));
+    z-index: 1;
+}
+
+.title-blurb {
+    position: relative;
+}
+
+#title-blurb {
+    position: absolute;
+    width: 48%;
+    height: 15vh;
+    margin-left: 2%;
+    margin-top: 30%;
+    z-index: 2;
+    filter: drop-shadow(0px 0px 5px rgb(37, 1, 52));
+}
+.project_cards {
+    position: relative;
+    z-index: 100;
+}
+
+
+#project-card1 {
+    position: absolute;
+    width: 25%;
+    margin-left: 7%;
+    margin-top: 88%;
+    filter: drop-shadow(0px 0px 8px rgb(255, 158, 236));
+}
+
+#project-card2 {
+    position: absolute;
+    width: 25%;
+    margin-left: 37.5%;
+    margin-top: 88%;
+    filter: drop-shadow(0px 0px 8px rgb(87, 199, 255));
+}
+
+#project-card3 {
+    position: absolute;
+    width: 25%;
+    margin-left: 68%;
+    margin-top: 88%;
+    filter: drop-shadow(0px 0px 8px rgb(255, 158, 236));
+}
+
+#project-card4 {
+    position: absolute;
+    width: 25%;
+    margin-left: 7%;
+    margin-top: 123%;
+    filter: drop-shadow(0px 0px 8px rgb(87, 199, 255));
+}
+
+#project-card5 {
+    position: absolute;
+    width: 25%;
+    margin-left: 37.5%;
+    margin-top: 123%;
+    filter: drop-shadow(0px 0px 8px rgb(255, 158, 236));
+}
+
+#project-card6 {
+    position: absolute;
+    width: 25%;
+    margin-left: 68%;
+    margin-top: 123%;
+    filter: drop-shadow(0px 0px 8px rgb(87, 199, 255));
+}
+
+#project-card1:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px rgb(255, 249, 125));
+}
+
+#project-card2:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px rgb(255, 249, 125));
+}
+
+#project-card3:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px rgb(255, 249, 125));
+}
+
+#project-card4:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px rgb(255, 249, 125));
+}
+
+#project-card5:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px rgb(255, 249, 125));
+}
+
+#project-card6:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px rgb(255, 249, 125));
+}
+
+.filler {
+    position: relative;
+    display: none;
+}
+
+#filler {
+    position: absolute;
+    width: 38%;
+    margin-left: 50.5%;
+    margin-top: 11%;
+    z-index: 100;
+}
+
+h1 {
+    position: absolute;
+    color: rgb(41, 25, 87);
+    font-size: 130%;
+    margin-left: 4.5%;
+    margin-top: 42%;
+    z-index: 100;
+    filter: drop-shadow(0px 0px 5px rgb(139, 139, 139));
+}
+
+h2 {
+    position: absolute;
+    color: rgb(41, 25, 87);
+    font-size: 50%;
+    margin-left: 54%;
+    margin-top: 23%;
+    z-index: 100;
+    filter: drop-shadow(0px 0px 5px rgb(139, 139, 139));
+    background-color: rgb(255, 255, 255);
+    padding: .6%;
+}
+
+
+.moving-h2:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+.moving-h2 {
+    display: inline-block;
+    position: absolute;
+    animation: moveUpDown 3s infinite ease-in-out;
+    color: #ff0fff; /* Start color */
+}
+
+.scroll-indicator {
+    position: absolute; /* Position it where you want */
+    top: 48%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element */
+    white-space: nowrap;
+    font-size: .5rem; /* Adjust font size */
+    font-weight: bold;
+    color: #240044; /* Adjust text color */
+}
+
+.scroll-indicator span {
+    display: inline-block;
+    animation: moveUpDown 1.5s infinite ease-in-out; /* Animation properties */
+    background-color: #eeff70;
+    padding: 5%;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Default position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.7; /* Partially transparent */
+    }
+}
+
+.scroll-indicator span:hover {
+    animation-play-state: paused; /* Pauses the animation on hover */
+    color: #555; /* Optional: Change color on hover */
+}
+
+#stars-container {
+    position: absolute;
+    z-index: 0;
+}
+
+#stars {
+    width: 100%;
+    height: auto;
+}
+
+.stickers {
+    position: relative;
+}
+
+#pixel {
+    position: absolute;
+    width: 16%;
+    margin-top: 49%;
+    margin-left: 35%;
+    z-index: 100;
+    transform: rotate(15deg);
+}
+
+#pixel2 {
+    position: absolute;
+    width: 16%;
+    margin-top: 25%;
+    margin-left: -40%;
+    z-index: 10;
+    transform: rotate(-15deg)
+}
+
+#pixel3 {
+    position: absolute;
+    width: 37%;
+    margin-left: 56.5%;
+    z-index: 2;
+    margin-top: 15%;
+}
+
+#pixel4 {
+    position: absolute;
+    width: 37%;
+    margin-left: 56.5%;
+    z-index: 2;
+    margin-top: 15%;
+}
+
+/* Card Titles (h3) */
+.card-title {
+    display: none;
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .card-title {
+    display: block;
+    opacity: 1;
+}
+
+/* Hover Preview */
+.hover-preview {
+    position: fixed;
+    margin-top: 24.5%;
+    margin-left: 58%;
+    width: 28%;
+    height: 19%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: scroll; /* Enable scrolling for large images */
+    border-radius: 10px;
+    z-index: 10;
+    padding: 10px;
+    filter: drop-shadow(0px 0px 10px rgb(57, 34, 91));
+}
+
+.hover-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blurb {
+    position: absolute;
+    transform: translateX(-50%);
+    display: none;
+    background-color: rgb(253, 187, 255);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.8rem;
+}
+
+#blurb-boba {
+    margin-top: 28%;
+    margin-left: 69.5%;
+    z-index: 10;
+}
+
+#blurb-stardew {
+    margin-top: 28%;
+    margin-left: 53.5%;
+}
+
+#blurb-adhd {
+    margin-top: 48.5%;
+    margin-left: 69.5%;
+}
+
+#blurb-covid {
+    margin-top: 48.5%;
+    margin-left: 53.5%;
+    z-index: 10;
+}
+
+#blurb-optimism {
+    margin-top: 48.5%;
+    margin-left: 85.5%;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+#blurb-alice {
+    margin-top: 28%;
+    margin-left: 85.5%;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 1000;
+    overflow: auto; /* Scrollable content */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: .8%;
+    border-radius: 2%;
+    width: 65%;
+    height: 90%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+
+.close-button {
+    position: absolute; /* Relative to the modal container */
+    top: 5%; /* Distance from the top of the modal */
+    margin-left: 64.2%;
+    font-size: 200%;
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it stays above other elements */
+}
+
+.close-button:hover {
+    color: #ff0000;
+}
+
+#modal-video {
+    position: absolute;
+    width: 98%;
+    height: auto;
+    margin-top: 15px; /* Add space between the video and other elements */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#modal-link {
+    display: block;
+    margin-top: 20px; /* Space between video and link */
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#modal-link:hover {
+    text-decoration: underline;
+}
+/* Video Styling */
+.modal-content video {
+    width: 100%; /* Make the video take the full width of the modal content */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 15px; /* Add spacing between elements */
+    border-radius: 10px;
+}
+
+/* Styling Based on Data Attributes */
+[data-class="stardew"] .modal-content {
+    background-color: #fdf5e6; /* Light yellow */
+}
+
+[data-class="boba"] .modal-content {
+    background-color: #6800b3; /* Light pink */
+    color: #803b6a; /* Purple text */
+}
+
+[data-class="stardew"] .modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: .8%;
+    border-radius: 2%;
+    width: 65%;
+    height: 90%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+[data-class="stardew"] .modal-content {
+    background-color: #fdf5e6; /* Light yellow */
+}
+
+[data-class="stardew"] .modal-content {
+    background-color: #fdf5e6; /* Light yellow */
+}
+
+[data-class="stardew"] .modal-content {
+    background-color: #fdf5e6; /* Light yellow */
+}
+
+
+}

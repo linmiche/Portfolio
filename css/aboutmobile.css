@@ -1,0 +1,587 @@
+@media screen and (max-width: 768px) and (orientation: portrait) {
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Press Start 2P';
+    z-index: -1;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.toggleBtn {
+    font-size: 2.1rem;
+    cursor: pointer;
+    color: rgb(255, 181, 241);
+    position: absolute; /* Position independently */
+    right: 1rem;
+    z-index: 100;
+    background-color: rgb(58, 58, 159);
+    border-radius: 10px;
+}
+
+.toggleBtn:hover {
+    color: #ffffff;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .navbar {
+    display: grid;
+}
+
+.navbar {
+    display: none; /* Initially hidden */
+    list-style: none;
+    position: absolute; /* Positioned independently of the layout */
+    top: 4.5rem; /* Adjust as needed */
+    right: 1rem; /* Position near the toggle button */
+    background-color: rgb(255, 181, 241);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 50; /* Ensure it's above other elements */
+    grid-template-rows: repeat(4, auto); /* Align items */
+    gap: 8px;
+    margin-top: -.5%;
+}
+
+.navbar li {
+    margin: 0.5rem 0;
+    text-decoration: underline;
+    text-decoration-color: rgb(58, 58, 159);
+}
+
+.navbar a {
+    color: rgb(58, 58, 159);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.navbar a:hover {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-decoration-color: #ffffff;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    background-color: rgb(58, 58, 159);
+    color: white;
+    text-decoration: underline;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.navbar a.active:hover {
+    background-color: #ffffff;
+    color: rgb(58, 58, 159);
+    border-color: rgb(58, 58, 159);
+}
+
+
+.audio-controls {
+    position: fixed;
+    margin-top: 3%;
+    margin-left: 2%;
+    background-color: rgb(255, 181, 241); /* Slightly transparent */
+    padding: 3px 6px; /* Minimal padding */
+    border-radius: 4px; /* Minimal rounding */
+    box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Subtle shadow */
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start; /* Align items to the left */
+    gap: 12px; /* Minimal gap between groups */
+}
+
+.audio-group {
+    display: flex;
+    align-items: center; /* Align label and slider horizontally */
+    gap: 10px; /* Small gap between label and slider */
+}
+
+.audio-controls label {
+    color: rgb(58, 58, 159);
+    font-size: 0.58rem; /* Very small font size */
+    width: 60px; /* Restrict label width for a compact layout */
+    text-align: left; /* Align text to the right */
+}
+
+.audio-controls input[type="range"] {
+    width: 65px; /* Decrease width */
+}
+
+.about-background {
+    position: absolute;
+    z-index: -1;
+}
+
+#about-background {
+    width: 400%;
+    margin-top: -40%;
+    margin-left: -20%;
+    z-index: -1;
+}
+
+.about-blurbs {
+    position: relative;
+    filter: drop-shadow(0px 0px 5px rgb(139, 139, 139));
+}
+
+#blurb2 {
+    display: none;
+}
+
+#blurb3 {
+    position: absolute;
+    width: 44%;
+    margin-left: 55%;
+    margin-top: 17%;
+    z-index: 4;
+}
+
+#blurb1 {
+    position: absolute;
+    width: 54%;
+    margin-left: 2%;
+    margin-top: 78%;
+    z-index: 5;
+}
+
+#blurb4 {
+    position: absolute;
+    width: 44%;
+    margin-left: 55%;
+    margin-top: 60%;
+    z-index: 5;
+}
+
+.profile-photos {
+    position: relative;
+}
+
+#headshot1 {
+    position: absolute;
+    width: 2px;
+    margin-left: 8%;
+    margin-top: 11%;
+    z-index: 3;
+}
+
+#headshot2 {
+    position: absolute;
+    width: 2px;
+    margin-left: 8%;
+    margin-top: 11%;
+}
+
+.photo-switcher {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Spacing between arrows and photo */
+    margin-top: 16%;
+    margin-left: 4%;
+}
+
+#current-photo {
+    width: 190px; /* Limit the photo size */
+    height: auto;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: relative;
+}
+
+#current-photo.fade-in {
+    opacity: 1;
+}
+
+.photo-arrow {
+    background-color: rgb(92, 194, 227);
+    color: #ffffff;
+    border: 2px solid rgb(255, 255, 255);
+    font-size: 1.9rem;
+    padding: .2% .3%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    filter: drop-shadow(0px 0px 10px white);
+    transform: scale(1.1);
+}
+
+.photo-arrow:hover {
+    background-color: grey;
+}
+
+.photo-arrow:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#prev-photo {
+    position: absolute;
+    left: -6%; /* Adjust horizontal position */
+    top: 52%; /* Center vertically */
+    transform: translateY(-50%); /* Align vertically */
+    z-index: 1000;
+}
+
+#next-photo {
+    position: absolute;
+    right: -6%; /* Adjust horizontal position */
+    top: 52%; /* Center vertically */
+    transform: translateY(-50%); /* Align vertically */
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    position: absolute;
+    font-size: 8px;
+    margin-top: 82%;
+    margin-left: 4%;
+    z-index: 10;
+    text-align: center;
+    line-height: 178%;
+    color: rgb(35, 55, 154);
+    text-shadow: 2px 2px 4px rgba(184, 184, 184, 0.6);
+}
+
+
+h3:first-of-type {
+    position: absolute;
+    font-size: 15px;
+    margin-top: 20.5%;
+    margin-left: 59%;
+    z-index: 10;
+    text-align: center;
+    line-height: 178%;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+h3:last-of-type {
+    position: absolute;
+    font-size: 18px;
+    margin-top: 62.5%;
+    margin-left: 65%;
+    z-index: 10;
+    text-align: center;
+    line-height: 178%;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+h4 {
+    color: #c948a0;
+    text-decoration: underline;
+}
+
+.scroll-indicator {
+    position: absolute; /* Position it where you want */
+    top: 64%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the element */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold;
+    color: #00486f; /* Adjust text color */
+}
+
+.scroll-indicator span {
+    display: inline-block;
+    animation: moveUpDown 1.5s infinite ease-in-out; /* Animation properties */
+    background-color: #ffa9e5;
+    padding: 5%;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Default position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.5; /* Partially transparent */
+    }
+}
+
+.scroll-indicator span:hover {
+    animation-play-state: paused; /* Pauses the animation on hover */
+    color: #555; /* Optional: Change color on hover */
+}
+
+
+ul {
+    position: absolute;
+    list-style-position: outside;
+    all: unset;
+}
+
+.scroll-box {
+    position: absolute;
+    width: 86%;
+    height: 160px;
+    padding: 18px;
+    overflow-y: scroll;
+    background-color: #ffffff;
+    scrollbar-width: thin;
+    scrollbar-color: #ffa9e5 #ffa9e5;
+    margin-left: 2.5%;
+    margin-top: 108%;
+    line-height: 1.2rem;
+}
+
+.scroll-box::-webkit-scrollbar {
+    width: 8px; /* Set width of the scrollbar */
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+
+ul li {
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
+
+.favorites {
+    position: relative;
+    width: 100%;
+}
+
+.clickable-image {
+    display: block; /* Ensure image is visible */
+    width: 100px; /* Set a specific size */
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Remove any borders */
+    margin: 0 auto; /* Center image horizontally */
+}
+
+.favorite-item {
+    position: relative; /* Needed for the blurb positioning */
+    text-align: center;
+    background-color: lightgray; /* Temporary for visibility */
+}
+
+.blurb {
+    display: none;
+}
+
+#blurb-matcha {
+    font-size: 8px;
+    margin-top: 49%;
+    margin-left: 78%;
+}
+
+#blurb-camera {
+    font-size: 8px;
+    margin-top: 49%;
+    margin-left: 78%;
+}
+
+#blurb-gameboy {
+    font-size: 8px;
+    margin-top: 49%;
+    margin-left: 78%;
+}
+
+#blurb-linkedin {
+    font-size: 8px;
+    margin-top: 96%;
+    margin-left: 78%;
+}
+
+#blurb-resume {
+    font-size: 8px;
+    margin-top: 96%;
+    margin-left: 78%;
+}
+
+#matcha {
+    position: absolute;
+    margin-left: 57%;
+    margin-top: 32%;
+    width: 10%;
+}
+
+#matcha:hover {
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+#mango:hover {
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+#gameboy:hover {
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+#mango {
+    position: absolute;
+    margin-left: 69%;
+    margin-top: 31%;
+    width: 18%;
+}
+
+#gameboy {
+    position: absolute;
+    margin-left: 88%;
+    margin-top: 33%;
+    width: 10%;
+}
+
+.stickers {
+    position: relative;
+}
+
+#michigan {
+    position: absolute;
+    z-index: 10;
+    margin-top: 106%;
+    margin-left: 2%;
+    width: 8%;
+    transform: rotate(-25deg);
+    filter: drop-shadow(0px 0px 5px rgb(118, 118, 118));
+}
+
+#game_controller {
+    position: absolute;
+    width: 15%;
+    z-index: 10;
+    margin-top: 106%;
+    margin-left: 84%;
+    transform: rotate(25deg);
+    filter: drop-shadow(0px 0px 3px rgb(118, 118, 118));
+}
+
+.contacts {
+    position: relative;
+}
+
+#linkedin {
+    position: absolute;
+    margin-top: 77%;
+    margin-left: 61%;
+    width: 15%;
+}
+
+#linkedin:hover {
+    transform: scale(1.2); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+#resume {
+    position: absolute;
+    position: absolute;
+    margin-top: 71.5%;
+    margin-left: 74%;
+    width: 26%;
+}
+
+#resume:hover {
+    transform: scale(1.2); /* Enlarge slightly on hover */
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+#clouds-container {
+    position: absolute;
+    z-index: -3;
+}
+
+#clouds {
+    width: 100%;
+    margin-top: -1%;
+    height: auto;
+}
+
+#stars-container {
+    position: absolute;
+    z-index: -4;
+}
+
+#stars {
+    width: 100%;
+    height: auto;
+    z-index: -4;
+}
+
+.hidden-michelle {
+    position: relative;
+}
+
+#hidden-michelle {
+    position: absolute;
+    width: 6%;
+    margin-left: 11%;
+    margin-top: 10.3%;
+    z-index: 10;
+}
+
+#hidden-michelle-bottom {
+    position: absolute;
+    width: 6%;
+    margin-left: 11%;
+    margin-top: 10.3%;
+}
+
+
+.page-navigation {
+    position: absolute;
+    padding: 20%;
+    margin-top: 140%;
+}
+
+.nav-button {
+    position: absolute;
+    text-decoration: none; /* Remove underline */
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 7px;
+    color: white;
+    background-color: #ff00ae; /* Button background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: transform 0.2s, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background: linear-gradient(90deg, #ff6699, #3366ff); /* Change color on hover */
+}
+
+.previous-button {
+    margin-left: -45%;
+}
+
+.next-button {
+    margin-left: 74%;
+    white-space: nowrap;
+}
+}
