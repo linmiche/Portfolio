@@ -526,11 +526,11 @@ h2 {
     display: none; /* Hidden by default */
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -19%;
+    width: 140%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    z-index: 1000;
+    z-index: 2000;
     overflow: auto; /* Scrollable content */
     justify-content: center;
     align-items: center;
@@ -550,10 +550,12 @@ h2 {
 }
 
 
+
+
 .close-button {
     position: absolute; /* Relative to the modal container */
     top: 5%; /* Distance from the top of the modal */
-    margin-left: 64.2%;
+    margin-left: 60%;
     font-size: 200%;
     font-weight: bold;
     color: #000000;
@@ -596,7 +598,7 @@ h2 {
 }
 
 /* Styling Based on Data Attributes */
-[data-class="stardew"] .modal-content {
+[data-class="covid"] .modal-content {
     background-color: #fdf5e6; /* Light yellow */
 }
 
@@ -617,17 +619,21 @@ h2 {
     text-align: center;
 }
 
-[data-class="stardew"] .modal-content {
+[data-class="adhd"] .modal-content {
     background-color: #fdf5e6; /* Light yellow */
 }
 
-[data-class="stardew"] .modal-content {
+[data-class="optimism"] .modal-content {
     background-color: #fdf5e6; /* Light yellow */
 }
 
-[data-class="stardew"] .modal-content {
+[data-class="alice"] .modal-content {
     background-color: #fdf5e6; /* Light yellow */
 }
 
+
+#modal-image {
+    width: 100%;
+}
 
 }
