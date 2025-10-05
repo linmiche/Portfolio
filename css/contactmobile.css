@@ -1,0 +1,319 @@
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-image: url('assets/background.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        font-family: 'Press Start 2P';
+        z-index: -1;
+    }
+
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .page-navigation {
+        position: absolute;
+        padding: 20%;
+        margin-top: 140%;
+    }
+
+    .nav-button {
+        position: absolute;
+        text-decoration: none; /* Remove underline */
+        font-family: 'Press Start 2P', sans-serif;
+        font-size: 7px;
+        color: white;
+        background-color: #ff00ae; /* Button background */
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: transform 0.2s, background 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-button:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        background: linear-gradient(90deg, #ff6699, #3366ff); /* Change color on hover */
+    }
+
+    .previous-button {
+        position: fixed;
+        margin-left: -18%;
+        z-index: 1000;
+    }
+
+.toggleBtn {
+    font-size: 2.1rem;
+    cursor: pointer;
+    color: rgb(255, 181, 241);
+    position: absolute; /* Position independently */
+    right: 1rem;
+    z-index: 100;
+    background-color: rgb(58, 58, 159);
+    border-radius: 10px;
+}
+
+.toggleBtn:hover {
+    color: #ffffff;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ .navbar {
+    display: grid;
+}
+
+.navbar {
+    display: none; /* Initially hidden */
+    list-style: none;
+    position: absolute; /* Positioned independently of the layout */
+    top: 4.5rem; /* Adjust as needed */
+    right: 1rem; /* Position near the toggle button */
+    background-color: rgb(255, 181, 241);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 5000; /* Ensure it's above other elements */
+    grid-template-rows: repeat(4, auto); /* Align items */
+    gap: 8px;
+    margin-top: -.5%;
+}
+
+.navbar li {
+    margin: 0.5rem 0;
+    text-decoration: underline;
+    text-decoration-color: rgb(58, 58, 159);
+}
+
+.navbar a {
+    color: rgb(58, 58, 159);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+.navbar a:hover {
+    background-color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    text-decoration-color: #ffffff;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    background-color: rgb(58, 58, 159);
+    color: white;
+    text-decoration: underline;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.navbar a.active:hover {
+    background-color: #ffffff;
+    color: rgb(58, 58, 159);
+    border-color: rgb(58, 58, 159);
+}
+
+
+.audio-controls {
+    position: fixed;
+    margin-top: 3%;
+    margin-left: 2%;
+    background-color: rgb(255, 181, 241); /* Slightly transparent */
+    padding: 3px 6px; /* Minimal padding */
+    border-radius: 4px; /* Minimal rounding */
+    box-shadow: 0px 5px 10px rgb(255, 255, 255); /* Subtle shadow */
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start; /* Align items to the left */
+    gap: 12px; /* Minimal gap between groups */
+}
+
+.audio-group {
+    display: flex;
+    align-items: center; /* Align label and slider horizontally */
+    gap: 10px; /* Small gap between label and slider */
+}
+
+.audio-controls label {
+    color: rgb(58, 58, 159);
+    font-size: 0.58rem; /* Very small font size */
+    width: 60px; /* Restrict label width for a compact layout */
+    text-align: left; /* Align text to the right */
+}
+
+.audio-controls input[type="range"] {
+    width: 65px; /* Decrease width */
+}
+
+#clouds-container {
+    position: absolute;
+    z-index: -3;
+}
+
+#clouds {
+    width: 100%;
+    margin-top: -1%;
+    height: auto;
+}
+
+#stars-container {
+    position: absolute;
+    z-index: -4;
+}
+
+#stars {
+    width: 100%;
+    margin-top: -4;
+    height: auto;
+}
+
+.background_card {
+    position: relative;
+}
+
+#background_card1 {
+    position: absolute;
+    width: 96%;
+    height: 74vh;
+    margin-left: 2%;
+    margin-top: 15%;
+}
+
+#background_card2 {
+    display: none
+}
+
+.joystick{
+    position: relative;
+}
+
+#joystick {
+    position: absolute;
+    width: 30%;
+    margin-left: 8%;
+    margin-top: 114%;
+}
+
+.contact-button {
+    position: relative;
+    background: none;
+    border: none; /* Remove default border */
+    padding: 0;
+}
+
+#contact-button {
+    position: absolute;
+    width: 130%;
+    height: 9vh;
+    margin-left: 18%;
+    margin-top: 25%;
+}
+
+.contact-button img {
+    width: 150px; /* Adjust size of the image */
+    transition: transform 0.2s ease; /* Add hover effect if desired */
+}
+
+.contact-button img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    filter: drop-shadow(0px 0px 8px rgb(255, 255, 255));
+}
+
+.stickers {
+    position: relative;
+}
+
+#bunny {
+    position: absolute;
+    margin-top: 146%;
+    margin-left: 70%;
+    transform: scaleX(-1);
+    width: 18%;
+}
+
+#heart {
+    position: absolute;
+    width: 14%;
+    margin-left: 71.5%;
+    margin-top: 133%;
+}
+
+h1 {
+    position: absolute;
+    font-size: 34px;
+    text-align: center;
+    left: -48.5%;
+    margin-top: 20.5%;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 10px rgb(57, 34, 91));
+}
+
+h2 {
+    position: absolute;
+    font-size: 92%;
+    margin-left: 45%;
+    margin-top: 121%;
+    color: #1e0735;
+    z-index: 2000;
+}
+
+h3 {
+    display: none;
+    position: absolute;
+    font-size: 70%;
+    margin-left: 38%;
+    border-radius: 1rem;
+    margin-top: 148%;
+    color: #6f0052;
+}
+
+.contact-form {
+    width: 40%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+    font-family: 'Press Start 2P', sans-serif;
+    z-index: 1000;
+    margin-left: 13.5%;
+    margin-top: 49%;
+  }
+
+  .contact-form label {
+    font-size: 70%;
+    color: #191919;
+    z-index: 1000;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 169%;
+    height: 1vh;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  #message {
+    height: 6vh;
+  }
+
+  .contact-form textarea {
+    resize: none; /* Prevent resizing */
+    z-index: 1000;
+  }
+
+}

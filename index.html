@@ -7,101 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/homemobile.css" media="screen and (max-width: 768px)">
 </head>
-<body style="background-image: url('assets/background.png'); background-size: cover; background-position: center; background-repeat: no-repeat; margin: 0; height: 100vh;">
-    <div class="header">
-        <label for="toggle" class="toggleBtn">&#9776;</label>
-        <input type="checkbox" id="toggle">
-        <ul class="navbar">
-            <li><a href="/" class="active">Home</a></li>
-            <li><a href="/about">About Me</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/skills">Skills & Tools</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </div>
-    <div class="homepage_container">
-        <!-- Main Content -->
-        <main>
-            <!-- Navigation Menu -->
-            <div class="homepage_menu">
-                <div id="about-button">
-                    <a href="/about">
-                        <img src="assets/about_icon.png" alt="About Me" class="homepage-menu-icon">
+
+<body style="background-image: url('assets/index_background.png'); background-size: cover; background-position: center; background-repeat: no-repeat; margin: 0; height: 100vh;">
+
+    <main>
+        <div id="adventure">
+                    <img src="assets/index/adventure.png" alt="Choose Your Own Adventure" class="adventure">
+                </div>
+        <div class="portfolio-grid">
+                <div id="normal_portfolio">
+                    <a href="https://linmiche.framer.website/">
+                        <img src="assets/index/normal_portfolio.png" alt="Normal Portfolio" class="normal_portfolio">
                     </a>
                 </div>
-                <div id="projects-button">
-                    <a href="/projects">
-                        <img src="assets/projects_icon.png" alt="Projects" class="homepage-menu-icon">
+                <div id="fun_portfolio">
+                    <a href="/home">
+                        <img src="assets/index/fun_portfolio.png" alt="Fun Portfolio" class="fun_portfolio">
                     </a>
                 </div>
-                <div id="skills-button">
-                    <a href="/skills">
-                        <img src="assets/skills_icon.png" alt="Skills & Tools" class="homepage-menu-icon">
+        </div>
+          <div class="button-grid">
+                <div id="normal_button">
+                    <a href="https://linmiche.framer.website/">
+                        <img src="assets/index/normal_button.png" alt="Normal Portfolio Button" class="normal_button">
                     </a>
                 </div>
-                <div id="creative-button">
-                    <a href="/creative_work">
-                        <img src="assets/creative_icon.png" alt="Creative Work" class="homepage-menu-icon">
-                    </a>
-                </div>
-                <div id="contact-button">
-                    <a href="/contact">
-                        <img src="assets/contact_icon.png" alt="Contact" class="homepage-menu-icon">
-                    </a>
-                </div>
-                <div id="prizes-button">
-                    <a href="/prizes">
-                        <img src="assets/homepage_prize_icon.png" alt="Prizes" class="homepage-menu-icon">
+                <div id="fun_button">
+                    <a href="/home">
+                        <img src="assets/index/fun_button.png" alt="Fun Portfolio Button" class="fun_button">
                     </a>
                 </div>
             </div>
 
-            <!-- Game Navigation -->
-            <div id="start-button-container">
-                <a href="/about">
-                    <img src="assets/start_button_icon.png" alt="Start Button" id="start-button">
-                </a>
-            </div>
-            <div id="michelle-container">
-                <img src="assets/homepage_michelle_icon.gif" alt="Tutorial Guide Michelle" id="homepage-michelle">
-            </div>
-
-            <!-- Additional Images Section -->
-            <div class="homepage-additional-images">
-                <div id="hills-container">
-                    <img src="assets/homepage_hills_icon.png" alt="Background Hills" id="hills">
-                </div>
-                <div id="title-container">
-                    <img src="assets/homepage_title_icon.gif" alt="Michelle Lin Portfolio" id="homepage-title">
-                </div>
-                <div id="stars-container">
-                    <img src="assets/stars.gif" alt="Blinking Stars" id="stars">
-                </div>
-                <div id="clouds-container">
-                    <img src="assets/clouds.gif" alt="Moving Clouds" id="clouds">
-                </div>
-                <div id="button-background-container">
-                    <img src="assets/homepage_button_background_icon.png" alt="Lilac Background Square" id="homepage-button-background">
-                </div>
-            </div>
-
-            <audio id="hoverSound" src="assets/sounds/hover-sound.mp3" preload="auto"></audio> <!-- all sound effects from www.zapsplat.com-->
-            <audio id="clickSound" src="assets/sounds/click-sound.mp3" preload="auto"></audio>
-
-            <audio id="background-music" preload="auto"></audio>
-
-            <div class="audio-controls">
-                <label for="music-volume">Music Volume:</label>
-                <input type="range" id="music-volume" min="0" max="1" step="0.1" value="1">
-
-                <label for="sfx-volume">SFX Volume:</label>
-                <input type="range" id="sfx-volume" min="0" max="1" step="0.1" value="1">
-            </div>
-
-        </main>
-    </div>
-    <script src="js/home.js"></script>
+    </main>
+    <script src="js/index.js"></script>
 </body>
 </html>
