@@ -97,26 +97,29 @@ body {
 }
 
 #michelle-container {
-    position: absolute;
-    z-index: 2;
+position: absolute;
+    bottom: 22%;   /* anchored near bottom */
+    left: 10%;
+    transform: translateX(-50%); /* centers horizontally */
+  z-index: 2;
 }
 
 #homepage-michelle {
     width: 85%;
-    margin-top: 118%;
-    margin-left: 20%;
     height: auto;
 }
 
 #title-container {
     position: absolute;
+      top: 22%;     /* relative to viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
     z-index: 3;
 }
 
 #homepage-title {
-    width: 65%;
-    margin-left: 31%;
-    margin-top: 16%;
+    width: 100%;
     height: auto;
 }
 
@@ -172,13 +175,14 @@ body {
 
 #button-background-container {
     position: absolute;
+      bottom: 7%;
+  left: 45%;
+  transform: translateX(-50%);
     z-index: 5;
 }
 
 #homepage-button-background {
-    width: 75%;
-    margin-left: 17.5%;
-    margin-top: 41.5%;
+    width: 117%;
     opacity: 0.73;
 }
 
