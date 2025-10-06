@@ -505,8 +505,8 @@ h2 {
     background-color: #000000;
     padding: .8%;
     border-radius: 2%;
-    width: 100%;
-    height: 90%;
+    width: 80%;
+    height: 85%;
     overflow-y: auto; /* Enable vertical scrolling */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -516,8 +516,8 @@ h2 {
 
 .close-button {
     position: absolute; /* Relative to the modal container */
-    top: 6%; /* Distance from the top of the modal */
-    margin-left: 94.2%;
+    top: 10%; /* Distance from the top of the modal */
+    margin-left: 74%;
     font-size: 200%;
     font-weight: bold;
     color: #ffffff;
@@ -558,12 +558,6 @@ h2 {
     height: auto; /* Maintain aspect ratio */
     margin-top: 15px; /* Add spacing between elements */
     border-radius: 10px;
-}
-
-
-[data-class="boba"] .modal-content {
-    background-color: #6800b3; /* Light pink */
-    color: #803b6a; /* Purple text */
 }
 
 .page-navigation {
